@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport"content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link rel="stylesheet" href="~/css/main.css" />
+    </head>
+    <body>
+        <header>
+            <img class="logo" runat="server" src="~/images/Logo.svg" />
+            <nav>
+                <ul>
+
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                    <li><a asp-controller="People" asp-action="Index">Projects</a></li>
+                    <li><a asp-controller="Home" asp-action="TryModelBinding" asp-route-id="1">Projects</a></li>
+                    <li><a asp-route="doctor">Fever checker</a></li>
+                    <li><a asp-route="guess">Guessing game</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>@ViewBag.Title</h1>
+            <div class="content">
+                @RenderBody()
+            </div>
+        </main>
+        
+        <footer>
+            <span>@DateTime.Now.Year </span> <span>Djzzz</span>
+        </footer>
+    </body>
+</html>
